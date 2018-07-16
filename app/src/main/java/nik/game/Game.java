@@ -62,7 +62,23 @@ public class Game extends AppCompatActivity {
         final String name = in.getStringExtra("name");
         tv.setText("Hi " + name);
         Timer myTimer=new Timer();
+        rt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
 
+                    case MotionEvent.ACTION_DOWN:
+                        if(rp>900&&lp>750){
+                            rp=900;
+                            lp=750;
+                        }
+                    lp = lp + 15;
+                    rp = rp + 15;
+                    return true;
+                }
+
+            return false;}
+        });
         lt.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -124,23 +140,7 @@ public class Game extends AppCompatActivity {
                                         }
                                         }
                                         if(y-r<=0)vy=-vy;
-                                        rt.setOnTouchListener(new View.OnTouchListener() {
-                                            @Override
-                                            public boolean onTouch(View view, MotionEvent motionEvent) {
-                                                switch (motionEvent.getAction()) {
 
-                                                    case MotionEvent.ACTION_DOWN:
-                                                        if(rp>900&&lp>750){
-                                                            rp=900;
-                                                            lp=750;
-                                                        }
-                                                        lp = lp + 15;
-                                                        rp = rp + 15;
-                                                        return true;
-                                                }
-
-                                                return false;}
-                                        });
                                         c.drawColor(Color.BLACK);
                                         c.drawCircle(x, y, r, paint);
                                         c.drawRect(lp,tp,rp,bp,paint);
