@@ -1,5 +1,6 @@
 ## Bounce Off
-It is a simple android game. Control the paddle by tapping on the left and right buttons and don't let the ball reach the bottom for more than 5 times. 
+It is a simple android game. Control the paddle by tapping on the left and right buttons.
+Don't let the ball reach the bottom for more than 5 times. 
 
 
 ![screenshot_1531766973](https://user-images.githubusercontent.com/34986121/42777365-790a32ac-8957-11e8-9859-97b4b8e7b32f.png)
