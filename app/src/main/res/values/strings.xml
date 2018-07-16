@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">game</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_end_game">EndGame</string>
+</resources>
