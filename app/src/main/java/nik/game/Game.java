@@ -3,6 +3,7 @@ package nik.game;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -44,6 +45,8 @@ public class Game extends AppCompatActivity {
     ImageView img;
     TextView score;
     TextView timetext;
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +64,8 @@ public class Game extends AppCompatActivity {
         Intent in = getIntent();
         final String name = in.getStringExtra("name");
         tv.setText("Hi " + name);
-        Timer myTimer=new Timer();
+
+
         rt.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -92,6 +96,7 @@ public class Game extends AppCompatActivity {
                         rp = rp - 15;
                         return true;
                 }
+
 
                 return false;}
         });

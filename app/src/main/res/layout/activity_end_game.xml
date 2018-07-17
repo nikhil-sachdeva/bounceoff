@@ -15,4 +15,14 @@
         android:text="TextView"
         android:textColor="@color/green"
         android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/Endmsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:text="Replay" />
 </RelativeLayout>
